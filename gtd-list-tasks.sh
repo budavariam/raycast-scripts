@@ -2,17 +2,20 @@
 
 # Raycast Script Command Template
 #
-# Duplicate this file and remove ".template." from the filename to get started.
 # See full documentation here: https://github.com/raycast/script-commands
 #
 # Required parameters:
 # @raycast.schemaVersion 1
-# @raycast.title My First Bash Script
+# @raycast.title GTD List Tasks
 # @raycast.mode fullOutput
 #
 # Optional parameters:
 # @raycast.icon 🤖
 # @raycast.packageName Raycast Scripts
 
-echo "Hello from My First Script"
-osascript -e 'display notification "Notification text" with title "Title"'
+# @raycast.argument1 { "type": "text", "placeholder": "limit - 50", "optional": true }
+
+LIMIT=${1:-50}
+
+tail -n "$LIMIT" ~/project/todolog/work/tasks.md
+echo "...Showing last $LIMIT tasks..."
