@@ -7,7 +7,7 @@
 # Required parameters:
 # @raycast.schemaVersion 1
 # @raycast.title GTD Add Task
-# @raycast.mode fullOutput
+# @raycast.mode silent
 #
 # Optional parameters:
 # @raycast.icon 🤖
